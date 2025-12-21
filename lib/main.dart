@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:saknly/features/test_page.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:saknly/features/onboarding/screens/onboarding_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,9 +11,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: TestPage(),
+    return ScreenUtilInit(
+      designSize: const Size(393, 852), // w , h
+      minTextAdapt: true,
+      splitScreenMode: true,
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: OnboardingPage(),
+      ),
     );
   }
 }

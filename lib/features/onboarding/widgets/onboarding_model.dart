@@ -1,12 +1,10 @@
 class OnboardingModel {
   final String image;
-  final String mainTitle;
   final String title;
   final String subTitle;
 
   OnboardingModel({
     required this.image,
-    required this.mainTitle,
     required this.title,
     required this.subTitle,
   });
@@ -14,59 +12,19 @@ class OnboardingModel {
 
 final List<OnboardingModel> onboardingData = [
   OnboardingModel(
-    image: 'images/rafiki.svg',
-    mainTitle: 'Welcome',
-    title: 'Your Personalised Alzheimer’s Prediction App',
-    subTitle:
-        'Get early detection insights, track your health data, and take steps towards better brain care.',
+    image: 'assets/images/onboarding1.png',
+    title: 'Smart Location-Based Search',
+    subTitle: 'Easily find homes and units close to your chosen location',
   ),
   OnboardingModel(
-    image: 'images/onboarding1.svg',
-    mainTitle: 'Features',
-    title: 'Peace of mind for you and your loved ones',
+    image: 'assets/images/onboarding2.png',
+    title: 'Find Your Perfect Home',
     subTitle:
-        'Stay on track with your daily plans, medications, and appointments — never miss what matters.',
+        'Make your buying journey easier and get the keys to your dream property',
   ),
   OnboardingModel(
-    image: 'images/onboarding2.svg',
-    mainTitle: 'Memory Enhancement',
-    title: 'Boost your memory and cognitive skills with ALOPR',
-    subTitle:
-        'Enjoy brain exercises, memory challenges, and activities that keep your mind sharp.',
-  ),
-  OnboardingModel(
-    image: 'images/onboarding3.svg',
-    mainTitle: 'Communication',
-    title: 'Stay connected with your caregivers and doctors',
-    subTitle:
-        'ALOPR offers secure messaging to share updates and get the support you need.',
-  ),
-  OnboardingModel(
-    image: 'images/onboarding4.svg',
-    mainTitle: 'Dark Mode',
-    title: 'Stay comfortable and focused with “Dark Mode”',
-    subTitle:
-        'ALOPR adjusts brightness to protect your eyes and ease night use.',
-  ),
-  OnboardingModel(
-    image: 'images/onboarding5.svg',
-    mainTitle: 'Make ALOPR your own',
-    title: 'We ensure your preferences and privacy come first',
-    subTitle:
-        'With ALOPR, customise reminders, notifications, and accessibility settings your way.',
-  ),
-  OnboardingModel(
-    image: 'images/onboarding6.svg',
-    mainTitle: 'Secure & Privacy',
-    title: 'We’re here to make your experience seamless',
-    subTitle:
-        'ALOPR keeps your data secure, backed up, and gives you useful app stats.',
-  ),
-  OnboardingModel(
-    image: 'images/onboarding7.svg',
-    mainTitle: 'Ready to Begin?',
-    title: 'You’re all set to start your journey with ALOPR',
-    subTitle:
-        'Designed to make life easier and boost your well-being — let’s make every day count!',
+    image: 'assets/images/onboarding3.png',
+    title: 'Everything You Need in App',
+    subTitle: 'Manage and monitor your real estate activity effortlessly',
   ),
 ];
