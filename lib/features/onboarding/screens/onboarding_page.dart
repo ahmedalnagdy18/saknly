@@ -65,21 +65,24 @@ class _OnboardingPageState extends State<OnboardingPage> {
                 ),
                 Expanded(
                   child: Center(
-                    child: Column(
-                      children: [
-                        AnimatedSwitcher(
-                          duration: const Duration(milliseconds: 300),
-                          child: SizedBox(
-                            key: ValueKey(data.image),
-                            height: 375.h,
-                            width: 252.w,
-                            child: Image.asset(
-                              data.image,
-                              fit: BoxFit.contain,
+                    child: SingleChildScrollView(
+                      physics: NeverScrollableScrollPhysics(),
+                      child: Column(
+                        children: [
+                          AnimatedSwitcher(
+                            duration: const Duration(milliseconds: 300),
+                            child: SizedBox(
+                              key: ValueKey(data.image),
+                              height: 375.h,
+                              width: 252.w,
+                              child: Image.asset(
+                                data.image,
+                                fit: BoxFit.contain,
+                              ),
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ),
