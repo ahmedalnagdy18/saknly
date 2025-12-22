@@ -32,8 +32,12 @@ class _CreateAccPageState extends State<CreateAccPage> {
           ),
           Padding(
             padding: EdgeInsets.symmetric(vertical: 23.h, horizontal: 16.w),
-            child: SingleChildScrollView(
-              child: SafeArea(
+            child: SafeArea(
+              child: SingleChildScrollView(
+                padding: EdgeInsets.only(
+                  // to make page scroll with textfield
+                  bottom: MediaQuery.viewInsetsOf(context).bottom,
+                ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
