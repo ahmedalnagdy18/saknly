@@ -2,6 +2,7 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:saknly/core/colors/app_colors.dart';
+import 'package:saknly/features/authentication/screens/create_acc_page.dart';
 import 'package:saknly/features/onboarding/widgets/onboarding_model.dart';
 
 class InfoBoxWidget extends StatelessWidget {
@@ -123,7 +124,14 @@ class InfoBoxWidget extends StatelessWidget {
                             AppColors.green10,
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => CreateAccPage(),
+                            ),
+                          );
+                        },
                         child: Text(
                           "Lets Go",
                           style: TextStyle(

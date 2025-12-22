@@ -25,9 +25,10 @@ class AppTexts {
   // body
 
   static TextStyle regularBody = TextStyle(
+    fontFamily: 'Roboto',
     fontSize: 16,
-    color: Colors.black,
-    fontWeight: FontWeight.normal,
+    color: Colors.white,
+    fontWeight: FontWeight.w400,
   );
 
   static TextStyle meduimBody = TextStyle(
