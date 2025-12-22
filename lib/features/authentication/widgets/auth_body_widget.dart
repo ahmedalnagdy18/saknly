@@ -49,6 +49,7 @@ class AuthBodyWidget extends StatelessWidget {
         ),
         SizedBox(height: 24.h),
         AppTextField(
+          obscureText: true,
           controller: passwordController,
           hintText: 'Password',
         ),

@@ -16,6 +16,14 @@ class _CreateAccPageState extends State<CreateAccPage> {
   final TextEditingController passwordController = TextEditingController();
 
   @override
+  void dispose() {
+    fullNameController.dispose();
+    emailOrPhController.dispose();
+    passwordController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
