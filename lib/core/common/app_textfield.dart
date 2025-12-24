@@ -28,6 +28,7 @@ class AppTextField extends StatelessWidget {
   final AutovalidateMode? autovalidateMode;
   final double? hintFontSize;
   final Color? fillColor;
+  final int? minLines;
 
   const AppTextField({
     super.key,
@@ -54,6 +55,7 @@ class AppTextField extends StatelessWidget {
     this.autovalidateMode,
     this.hintFontSize,
     this.fillColor,
+    this.minLines,
   });
 
   @override
@@ -81,7 +83,7 @@ class AppTextField extends StatelessWidget {
       obscureText: obscureText ?? false,
       maxLength: maxLength,
       maxLines: maxLines ?? 1,
-      minLines: 1,
+      minLines: minLines ?? 1,
       controller: controller,
       validator: validator,
       inputFormatters: inputFormatters,
@@ -119,7 +121,7 @@ class AppTextField extends StatelessWidget {
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(raduisSize ?? 8.r),
           borderSide: BorderSide(
-            color: AppColors.green4,
+            color: fillColor ?? AppColors.green1,
           ),
         ),
 
@@ -127,11 +129,11 @@ class AppTextField extends StatelessWidget {
         suffixIcon: suffixIcon,
         hintText: hintText,
         filled: true,
-        fillColor: fillColor ?? AppColors.green4,
+        fillColor: fillColor ?? AppColors.green1,
         hintStyle: TextStyle(
           fontSize: hintFontSize ?? 14,
           fontWeight: FontWeight.w400,
-          color: hintTextColor ?? Colors.white,
+          color: hintTextColor ?? AppColors.green5,
         ),
       ),
     );

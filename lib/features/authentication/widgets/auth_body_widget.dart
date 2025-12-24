@@ -40,18 +40,24 @@ class AuthBodyWidget extends StatelessWidget {
           AppTextField(
             controller: fullNameController,
             hintText: 'Full name ',
+            hintTextColor: AppColors.white,
+            fillColor: AppColors.green4,
           ),
           SizedBox(height: 24.h),
         ],
         AppTextField(
           controller: emailOrPhController,
           hintText: 'Email or phone number',
+          hintTextColor: AppColors.white,
+          fillColor: AppColors.green4,
         ),
         SizedBox(height: 24.h),
         AppTextField(
           obscureText: true,
           controller: passwordController,
           hintText: 'Password',
+          hintTextColor: AppColors.white,
+          fillColor: AppColors.green4,
         ),
         SizedBox(height: 36.h),
         MainAppButton(
