@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:saknly/core/colors/app_colors.dart';
 import 'package:saknly/features/authentication/widgets/auth_body_widget.dart';
-import 'package:saknly/features/home/add_property_page.dart';
+import 'package:saknly/features/home/screens/add_property_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -69,7 +69,7 @@ class _LoginPageState extends State<LoginPage> {
                           Icons.keyboard_double_arrow_left_rounded,
                         ),
                       ),
-                      SizedBox(height: 80.h),
+                      SizedBox(height: 60.h),
                       Center(
                         child: Padding(
                           padding: EdgeInsets.symmetric(horizontal: 28.w),

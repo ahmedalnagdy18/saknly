@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:mobkit_dashed_border/mobkit_dashed_border.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:saknly/core/colors/app_colors.dart';
 import 'package:saknly/core/common/app_textfield.dart';
 import 'package:saknly/core/common/buttons.dart';
 import 'package:saknly/core/fonts/app_text.dart';
+import 'package:saknly/features/home/widgets/select_image_widget.dart';
 
 class AddPropertyPage extends StatefulWidget {
   const AddPropertyPage({super.key});
@@ -15,6 +15,37 @@ class AddPropertyPage extends StatefulWidget {
 }
 
 class _AddPropertyPageState extends State<AddPropertyPage> {
+  List<XFile>? uploadedImage;
+
+  Future<void> pickImage({required int remaining}) async {
+    if (remaining <= 0) return;
+
+    List<XFile> newImages = [];
+
+    if (remaining == 1) {
+      final singleImage = await ImagePicker().pickImage(
+        source: ImageSource.gallery,
+      );
+      if (singleImage != null) {
+        newImages.add(singleImage);
+      }
+    } else {
+      final pickedImages = await ImagePicker().pickMultiImage(
+        limit: remaining,
+      );
+      newImages.addAll(pickedImages);
+    }
+
+    if (newImages.isEmpty) return;
+
+    setState(() {
+      uploadedImage = <XFile>[
+        ...(uploadedImage ?? <XFile>[]),
+        ...newImages,
+      ].take(3).toList();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -143,43 +174,23 @@ class _AddPropertyPageState extends State<AddPropertyPage> {
                     ),
                   ),
                   SizedBox(height: 16.h),
-                  SizedBox(
-                    height: 130.h,
-                    child: ListView.separated(
-                      separatorBuilder: (context, index) =>
-                          SizedBox(width: 32.w),
-                      scrollDirection: Axis.horizontal,
-                      itemCount: 3,
-                      itemBuilder: (context, index) {
-                        return Container(
-                          width: 100.r,
-                          height: 100.r,
-                          decoration: BoxDecoration(
-                            border: DashedBorder.all(
-                              dashLength: 5,
-                              color: AppColors.green10,
-                            ),
-                            borderRadius: BorderRadius.circular(16.r),
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              SvgPicture.asset('assets/images/upload_icon.svg'),
-                              SizedBox(height: 4.h),
-                              Text(
-                                "Add Photo",
-                                style: AppTexts.regularBody.copyWith(
-                                  color: AppColors.green10,
-                                  fontSize: 12,
-                                ),
-                              ),
-                            ],
-                          ),
-                        );
-                      },
-                    ),
+                  SelectImageWidget(
+                    uploadedImage: uploadedImage,
+                    onAddImage: () {
+                      final currentCount = uploadedImage?.length ?? 0;
+                      final remaining = 3 - currentCount;
+
+                      if (remaining > 0) {
+                        pickImage(remaining: remaining);
+                      }
+                    },
+                    onRemoveImage: (index) {
+                      setState(() {
+                        uploadedImage!.removeAt(index);
+                      });
+                    },
                   ),
+
                   SizedBox(height: 42.h),
                   Text(
                     "Amenities",

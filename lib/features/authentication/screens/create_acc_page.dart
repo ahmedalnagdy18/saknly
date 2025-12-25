@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:saknly/core/colors/app_colors.dart';
 import 'package:saknly/features/authentication/widgets/auth_body_widget.dart';
+import 'package:saknly/features/home/screens/home_page.dart';
 
 class CreateAccPage extends StatefulWidget {
   const CreateAccPage({super.key});
@@ -70,7 +71,7 @@ class _CreateAccPageState extends State<CreateAccPage> {
                           Icons.keyboard_double_arrow_left_rounded,
                         ),
                       ),
-                      SizedBox(height: 80.h),
+                      SizedBox(height: 60.h),
                       Center(
                         child: Padding(
                           padding: EdgeInsets.symmetric(horizontal: 28.w),
@@ -79,7 +80,14 @@ class _CreateAccPageState extends State<CreateAccPage> {
                             fullNameController: fullNameController,
                             emailOrPhController: emailOrPhController,
                             passwordController: passwordController,
-                            buttonPressed: () {},
+                            buttonPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => HomePage(),
+                                ),
+                              );
+                            },
                           ),
                         ),
                       ),
