@@ -11,7 +11,7 @@ class PostBodyWidget extends StatelessWidget {
     return Container(
       clipBehavior: Clip.antiAlias,
       width: double.infinity,
-      height: 361.h,
+      height: 301.h, //todo: ask here desginer
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16.r),
       ),
@@ -65,6 +65,8 @@ class PostBodyWidget extends StatelessWidget {
                         fontSize: 22,
                       ),
                       textAlign: TextAlign.start,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
                     ),
                   ),
                 ),

@@ -178,7 +178,7 @@ Widget categoriesWidget({
   return GestureDetector(
     onTap: onTap,
     child: Container(
-      padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 12.h),
+      padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 6.h),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(50.r),
         color: isSelected ? AppColors.green3 : AppColors.green1,
