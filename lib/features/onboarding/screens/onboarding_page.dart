@@ -40,6 +40,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                     vertical: 19.h,
                   ),
                   child: IconButton(
+                    iconSize: 30.r,
                     disabledColor: Colors.transparent,
                     color: currentIndex > 0
                         ? AppColors.green10

@@ -19,7 +19,7 @@ class InfoBoxWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 282.h,
+      // height: 282.h,
       width: double.infinity,
       padding: EdgeInsets.symmetric(
         horizontal: 22.w,
@@ -41,6 +41,7 @@ class InfoBoxWidget extends StatelessWidget {
         ),
       ),
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Padding(
@@ -52,7 +53,7 @@ class InfoBoxWidget extends StatelessWidget {
                 key: ValueKey(data.subTitle),
                 style: TextStyle(
                   fontFamily: 'Roboto',
-                  fontSize: 24,
+                  fontSize: 24.sp,
                   fontWeight: FontWeight.w800,
                   color: AppColors.green9,
                 ),
@@ -68,14 +69,14 @@ class InfoBoxWidget extends StatelessWidget {
               key: ValueKey(data.subTitle),
               style: TextStyle(
                 fontFamily: 'Roboto',
-                fontSize: 18,
+                fontSize: 18.sp,
                 fontWeight: FontWeight.w400,
                 color: AppColors.green9,
               ),
               textAlign: TextAlign.center,
             ),
           ),
-          Spacer(),
+          SizedBox(height: 30.h),
           Padding(
             padding: EdgeInsets.symmetric(
               horizontal: 6.w,
@@ -106,20 +107,31 @@ class InfoBoxWidget extends StatelessWidget {
                   position: currentIndex.toDouble(),
                 ),
                 currentIndex != 2
-                    ? IconButton(
-                        color: Colors.white,
-                        style: ButtonStyle(
-                          backgroundColor: WidgetStatePropertyAll(
-                            AppColors.green5,
+                    ? SizedBox(
+                        height: 48.r,
+                        width: 48.r,
+                        child: IconButton(
+                          iconSize: 22.r,
+                          color: Colors.white,
+                          style: ButtonStyle(
+                            backgroundColor: WidgetStatePropertyAll(
+                              AppColors.green5,
+                            ),
                           ),
-                        ),
-                        onPressed: onPressed,
-                        icon: Icon(
-                          Icons.arrow_forward,
+                          onPressed: onPressed,
+                          icon: Icon(
+                            Icons.arrow_forward,
+                          ),
                         ),
                       )
                     : ElevatedButton(
                         style: ButtonStyle(
+                          padding: WidgetStatePropertyAll(
+                            EdgeInsetsGeometry.symmetric(
+                              horizontal: 25.r,
+                              vertical: 8.r,
+                            ),
+                          ),
                           backgroundColor: WidgetStatePropertyAll(
                             AppColors.green10,
                           ),
@@ -135,9 +147,10 @@ class InfoBoxWidget extends StatelessWidget {
                         child: Text(
                           "Lets Go",
                           style: TextStyle(
+                            fontFamily: 'Roboto',
                             color: Colors.white,
                             fontWeight: FontWeight.w500,
-                            fontSize: 16,
+                            fontSize: 20.sp,
                           ),
                         ),
                       ),

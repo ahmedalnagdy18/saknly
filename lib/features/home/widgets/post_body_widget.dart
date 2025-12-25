@@ -34,12 +34,13 @@ class PostBodyWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Icon(
                       Icons.location_on,
                       color: AppColors.green5,
+                      size: 22.r,
                     ),
                     SizedBox(width: 8.w),
                     Text(
@@ -62,7 +63,7 @@ class PostBodyWidget extends StatelessWidget {
                       'Luxury Villa with Ocean View',
                       style: AppTexts.regularBody.copyWith(
                         fontWeight: FontWeight.w700,
-                        fontSize: 22,
+                        fontSize: 22.sp,
                       ),
                       textAlign: TextAlign.start,
                       maxLines: 2,
@@ -99,6 +100,7 @@ class PostBodyWidget extends StatelessWidget {
                 Container(
                   alignment: Alignment.bottomRight,
                   child: IconButton(
+                    iconSize: 22.r,
                     disabledColor: Colors.transparent,
                     color: AppColors.green10,
                     style: ButtonStyle(

@@ -62,15 +62,15 @@ class SelectImageWidget extends StatelessWidget {
                           child: GestureDetector(
                             onTap: () => onRemoveImage(index),
                             child: Container(
-                              padding: const EdgeInsets.all(4),
+                              padding: EdgeInsets.all(4.r),
                               decoration: const BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: Colors.black54,
                               ),
-                              child: const Icon(
+                              child: Icon(
                                 Icons.cancel,
                                 color: Colors.white,
-                                size: 18,
+                                size: 18.r,
                               ),
                             ),
                           ),
@@ -80,15 +80,19 @@ class SelectImageWidget extends StatelessWidget {
                   : Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        SvgPicture.asset(
-                          'assets/images/upload_icon.svg',
+                        SizedBox(
+                          height: 41.r,
+                          width: 50.r,
+                          child: SvgPicture.asset(
+                            'assets/images/upload_icon.svg',
+                          ),
                         ),
                         SizedBox(height: 4.h),
                         Text(
                           "Add Photo",
                           style: AppTexts.regularBody.copyWith(
                             color: AppColors.green10,
-                            fontSize: 12,
+                            fontSize: 12.sp,
                           ),
                         ),
                       ],

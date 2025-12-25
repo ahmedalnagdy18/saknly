@@ -59,11 +59,12 @@ class _AddPropertyPageState extends State<AddPropertyPage> {
           "Add Property",
           style: AppTexts.regularBody.copyWith(
             color: AppColors.green10,
-            fontSize: 22,
+            fontSize: 22.sp,
             fontWeight: FontWeight.w500,
           ),
         ),
         leading: IconButton(
+          iconSize: 22.r,
           disabledColor: Colors.transparent,
           color: AppColors.green10,
           style: ButtonStyle(
@@ -136,6 +137,7 @@ class _AddPropertyPageState extends State<AddPropertyPage> {
                   AppTextField(
                     hintText: "Pin Property Location",
                     suffixIcon: Icon(
+                      size: 22.r,
                       Icons.location_pin,
                       color: AppColors.green5,
                     ),

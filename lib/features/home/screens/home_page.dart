@@ -46,13 +46,14 @@ class _HomePageState extends State<HomePage> {
                             Icon(
                               Icons.location_on,
                               color: AppColors.green10,
+                              size: 22.r,
                             ),
                             SizedBox(width: 4.w),
                             Text(
                               'Mansoura , Egypt',
                               style: AppTexts.regularBody.copyWith(
                                 color: AppColors.green10,
-                                fontSize: 14,
+                                fontSize: 14.sp,
                               ),
                             ),
                           ],
@@ -76,7 +77,7 @@ class _HomePageState extends State<HomePage> {
                     'Find your New House ',
                     style: AppTexts.regularBody.copyWith(
                       fontWeight: FontWeight.w500,
-                      fontSize: 28,
+                      fontSize: 28.sp,
                       color: AppColors.green10,
                     ),
                   ),
@@ -85,9 +86,13 @@ class _HomePageState extends State<HomePage> {
                     raduisSize: 50.r,
                     prefixIcon: Container(
                       padding: EdgeInsets.all(12.r),
-                      child: SvgPicture.asset(
-                        'assets/images/search_icon.svg',
-                        fit: BoxFit.contain,
+                      child: SizedBox(
+                        height: 20.sp,
+                        width: 20.sp,
+                        child: SvgPicture.asset(
+                          'assets/images/search_icon.svg',
+                          fit: BoxFit.contain,
+                        ),
                       ),
                     ),
                     hintText: "Search",
@@ -97,7 +102,7 @@ class _HomePageState extends State<HomePage> {
                     'Categories',
                     style: AppTexts.regularBody.copyWith(
                       fontWeight: FontWeight.w500,
-                      fontSize: 20,
+                      fontSize: 20.sp,
                       color: AppColors.black,
                     ),
                   ),
@@ -143,7 +148,7 @@ class _HomePageState extends State<HomePage> {
                     'Recommended',
                     style: AppTexts.regularBody.copyWith(
                       fontWeight: FontWeight.w500,
-                      fontSize: 20,
+                      fontSize: 20.sp,
                       color: AppColors.black,
                     ),
                   ),
@@ -186,7 +191,11 @@ Widget categoriesWidget({
       ),
       child: Row(
         children: [
-          SvgPicture.asset(image),
+          SizedBox(
+            height: 36.r,
+            width: 36.r,
+            child: SvgPicture.asset(image),
+          ),
           SizedBox(width: 4.w),
           Text(
             title,

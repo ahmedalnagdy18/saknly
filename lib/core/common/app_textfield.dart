@@ -92,7 +92,7 @@ class AppTextField extends StatelessWidget {
         contentPadding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 12.w),
         labelText: label,
         labelStyle: TextStyle(
-          fontSize: 14,
+          fontSize: 14.sp,
           fontWeight: FontWeight.w400,
           color: Colors.grey,
         ),
@@ -131,7 +131,7 @@ class AppTextField extends StatelessWidget {
         filled: true,
         fillColor: fillColor ?? AppColors.green1,
         hintStyle: TextStyle(
-          fontSize: hintFontSize ?? 14,
+          fontSize: hintFontSize ?? 14.sp,
           fontWeight: FontWeight.w400,
           color: hintTextColor ?? AppColors.green5,
         ),

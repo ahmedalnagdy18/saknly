@@ -57,6 +57,7 @@ class _CreateAccPageState extends State<CreateAccPage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       IconButton(
+                        iconSize: 30.r,
                         disabledColor: Colors.transparent,
                         color: AppColors.green10,
                         style: ButtonStyle(

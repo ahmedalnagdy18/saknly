@@ -30,7 +30,7 @@ class AuthBodyWidget extends StatelessWidget {
           isLoginPage != true ? "Create Account" : "Sign in ",
           style: TextStyle(
             fontFamily: 'Roboto',
-            fontSize: 32,
+            fontSize: 32.sp,
             fontWeight: FontWeight.w500,
             color: AppColors.green10,
           ),
@@ -92,7 +92,12 @@ class AuthBodyWidget extends StatelessWidget {
               padding: EdgeInsets.symmetric(
                 horizontal: 11.w,
               ),
-              child: Text("or continue with"),
+              child: Text(
+                "or continue with",
+                style: AppTexts.regularBody.copyWith(
+                  color: Color(0xFF757575),
+                ),
+              ),
             ),
             Expanded(
               child: Container(
