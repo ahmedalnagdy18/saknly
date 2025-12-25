@@ -80,6 +80,7 @@ class _AddPropertyPageState extends State<AddPropertyPage> {
         ),
       ),
       body: SafeArea(
+        bottom: false,
         child: GestureDetector(
           // also hide keyboard automatic
           onTap: () => FocusScope.of(context).unfocus(),
@@ -231,6 +232,7 @@ class _AddPropertyPageState extends State<AddPropertyPage> {
                     text: 'Publish',
                     onPressed: () {},
                   ),
+                  SizedBox(height: 16.h),
                 ],
               ),
             ),
