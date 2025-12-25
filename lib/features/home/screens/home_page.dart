@@ -103,6 +103,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   SizedBox(height: 16.h),
                   Row(
+                    //todo: ask about if we will increase this
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       categoriesWidget(
