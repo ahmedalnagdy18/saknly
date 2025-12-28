@@ -150,7 +150,7 @@ class InfoBoxWidget extends StatelessWidget {
                             fontFamily: 'Roboto',
                             color: Colors.white,
                             fontWeight: FontWeight.w500,
-                            fontSize: 20.sp,
+                            fontSize: 18.sp,
                           ),
                         ),
                       ),
