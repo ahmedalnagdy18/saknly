@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:saknly/core/colors/app_colors.dart';
+import 'package:saknly/core/common/main_appbar.dart';
 import 'package:saknly/features/authentication/widgets/auth_body_widget.dart';
 import 'package:saknly/features/home/screens/home_page.dart';
 
@@ -27,8 +27,10 @@ class _CreateAccPageState extends State<CreateAccPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
+      appBar: MainAppBar(),
       body: Stack(
         children: [
           SizedBox(
@@ -56,22 +58,6 @@ class _CreateAccPageState extends State<CreateAccPage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      IconButton(
-                        iconSize: 30.r,
-                        disabledColor: Colors.transparent,
-                        color: AppColors.green10,
-                        style: ButtonStyle(
-                          backgroundColor: WidgetStatePropertyAll(
-                            AppColors.green6.withAlpha(50),
-                          ),
-                        ),
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
-                        icon: Icon(
-                          Icons.keyboard_double_arrow_left_rounded,
-                        ),
-                      ),
                       SizedBox(height: 60.h),
                       Center(
                         child: Padding(

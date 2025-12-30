@@ -46,6 +46,7 @@ dependencies:
   internet_connection_checker: ^3.0.1
   intl: ^0.20.2
   mobkit_dashed_border: ^0.0.8
+  pinput: ^6.0.1
   shared_preferences: ^2.5.4
 
 dev_dependencies:

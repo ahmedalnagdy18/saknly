@@ -61,6 +61,7 @@ class AppTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      obscuringCharacter: "*",
       contextMenuBuilder: (context, editableTextState) {
         if (readOnly == true) {
           return const SizedBox.shrink();

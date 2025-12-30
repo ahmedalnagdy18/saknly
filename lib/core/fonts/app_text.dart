@@ -6,7 +6,7 @@ class AppTexts {
 
   // Heading
   static TextStyle largeHeading = TextStyle(
-    fontWeight: FontWeight.bold,
+    fontWeight: FontWeight.w500,
     color: Colors.black,
     fontSize: 32,
   );
@@ -26,16 +26,17 @@ class AppTexts {
   // body
 
   static TextStyle regularBody = TextStyle(
-    fontFamily: 'Roboto',
+    // fontFamily: 'Roboto',
     fontSize: 16.sp,
     color: Colors.white,
     fontWeight: FontWeight.w400,
   );
 
   static TextStyle meduimBody = TextStyle(
+    // fontFamily: 'Roboto',
     fontSize: 14,
     color: Colors.black,
-    fontWeight: FontWeight.w500,
+    fontWeight: FontWeight.w400,
   );
 
   static TextStyle smallBody = TextStyle(fontSize: 12, color: Colors.black);

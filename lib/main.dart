@@ -16,6 +16,9 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       child: MaterialApp(
+        theme: ThemeData(
+          fontFamily: 'Roboto',
+        ),
         debugShowCheckedModeBanner: false,
         home: OnboardingPage(),
       ),
