@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:saknly/core/colors/app_colors.dart';
 import 'package:saknly/core/fonts/app_text.dart';
+import 'package:saknly/features/home/screens/post_details_page.dart';
 
 class PostBodyWidget extends StatelessWidget {
   const PostBodyWidget({super.key});
@@ -109,7 +110,12 @@ class PostBodyWidget extends StatelessWidget {
                       ),
                     ),
                     onPressed: () {
-                      Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => PostDetailsPage(),
+                        ),
+                      );
                     },
                     icon: Icon(
                       Icons.keyboard_double_arrow_right_rounded,

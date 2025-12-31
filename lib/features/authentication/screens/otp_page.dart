@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:saknly/core/colors/app_colors.dart';
+import 'package:saknly/core/common/alert_dialog_widget.dart';
 import 'package:saknly/core/common/buttons.dart';
 import 'package:saknly/core/common/main_appbar.dart';
 import 'package:saknly/core/fonts/app_text.dart';
+import 'package:saknly/features/authentication/screens/new_password_page.dart';
 import 'package:saknly/features/authentication/widgets/otp_widget.dart';
 
 class OtpPage extends StatefulWidget {
@@ -106,7 +108,23 @@ class _OtpPageState extends State<OtpPage> {
                               padding: EdgeInsets.symmetric(horizontal: 26.w),
                               child: MainAppButton(
                                 bouttonWidth: double.infinity,
-                                onPressed: () {},
+                                onPressed: () {
+                                  showDialog(
+                                    barrierDismissible: false,
+                                    context: context,
+                                    builder: (context) => AlertDialogWidget(
+                                      onPressed: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                NewPasswordPage(),
+                                          ),
+                                        );
+                                      },
+                                    ),
+                                  );
+                                },
                                 text: 'Confirm',
                               ),
                             ),

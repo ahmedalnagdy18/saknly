@@ -3,20 +3,32 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:saknly/core/colors/app_colors.dart';
+import 'package:saknly/core/fonts/app_text.dart';
 
 class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
   final VoidCallback? onBack;
   final double iconSize;
+  final String? title;
 
   const MainAppBar({
     super.key,
     this.onBack,
     this.iconSize = 26,
+    this.title,
   });
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      centerTitle: true,
+      title: Text(
+        title ?? "",
+        style: AppTexts.largeHeading.copyWith(
+          fontSize: 22.sp,
+          fontWeight: FontWeight.w500,
+          color: AppColors.green10,
+        ),
+      ),
       leadingWidth: 62.w,
       backgroundColor: Colors.transparent,
       forceMaterialTransparency: true,
